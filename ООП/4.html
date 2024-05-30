@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            name;
+            salary;
+        }
+        // # 1
+        let one = new Employee;
+        let two = new Employee;
+        let three = new Employee;
+        // # 2
+        one.name = 'Виктор';
+        one.salary = 88000;
+        two.name = 'Дмитрий';
+        two.salary = 70000;
+        three.name = 'Игорь';
+        three.salary = 4000;
+        // # 3
+        alert('Сумма зарплат работников -> ' + (one.salary + two.salary + three.salary));
+    </script>
+</body>
+</html>
