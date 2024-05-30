@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            // #1
+            #name;
+            #salary;
+            #age;
+            // #2
+            constructor(name,age,salary){
+                this.#name = name;
+                this.#salary = salary;
+                this.#age = age;
+            }
+            // # 3
+            print(){
+                alert(`name -> ${this.#name}\nage -> ${this.#age}\nsalary -> ${this.#salary}`);
+            }
+        }
+        let us = new Employee('jh',18,7410);
+        us.print();
+    </script>
+</body>
+</html>
