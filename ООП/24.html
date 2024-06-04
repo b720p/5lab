@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<script>
+			class Employee {
+				#name;
+				#salary;
+
+				constructor(name, salary) {
+					this.#name = name;
+					this.#salary = salary;
+				}
+				getName() {
+					return this.#name;
+				}
+				getSalary() {
+					return this.#salary;
+				}
+			}
+
+			// 1
+			let employees = [new Employee("john", 35000), new Employee("eric", 35555), new Employee("kyle", 40000)];
+
+			// 2
+			for (let employee of employees) console.log(`${employee.getName()}, ${employee.getSalary()} рублей.`);
+		</script>
+	</head>
+</html>

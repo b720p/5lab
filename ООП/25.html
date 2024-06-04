@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<script>
+			class Employee {
+				#name;
+				#salary;
+
+				constructor(name, salary) {
+					this.#name = name;
+					this.#salary = salary;
+				}
+				getName() {
+					return this.#name;
+				}
+				getSalary() {
+					return this.#salary;
+				}
+			}
+
+			// 1
+			class EmployeesCollection {
+				#employees;
+
+				constructor() {
+					this.#employees = [];
+				}
+
+				// 2
+				addEmployee(employee) {
+					this.#employees.push(employee);
+				}
+
+				// 3
+				printEmployees() {
+					for (let employee of this.#employees) console.log(`${employee.getName()}`);
+				}
+
+				// 4
+				printEmployeesSalarySum() {
+					let sum = 0;
+					for (let employee of this.#employees) sum += employee.getSalary();
+					console.log(sum);
+				}
+
+				// 5
+				printEmployeesSalaryAvg() {
+					let sum = 0;
+					for (let employee of this.#employees) sum += employee.getSalary();
+					console.log(sum / this.#employees.length);
+				}
+			}
+		</script>
+	</head>
+</html>

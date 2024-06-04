@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<script>
+			class Employee {
+				#name;
+				#salary;
+
+				constructor(name, salary) {
+					this.#name = name;
+					this.#salary = salary;
+				}
+
+				// 1
+				getSalary() {
+					return this.#salary;
+				}
+				
+				setSalary(salary) {
+					this.#salary = salary;
+				}
+			}
+		</script>
+	</head>
+</html>

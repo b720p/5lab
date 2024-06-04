@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<script>
+			class User {
+				constructor(name, surn) {
+					this.name = name;
+					this.surn = surn;
+				}
+
+				getName() {
+					return this.name;
+				}
+				getSurn() {
+					return this.surn;
+				}
+			}
+
+			// 1
+			class Employee extends User {
+				#salary;
+				#age;
+
+				// 2
+				constructor(name, salary, age) {
+					this.name = name;
+					this.#salary = salary;
+					this.#age = age;
+				}
+
+				// 3
+				getAge() {
+					return this.#age;
+				}
+
+				setAge(age) {
+					this.#age = age;
+				}
+
+				getSalary() {
+					return this.#salary;
+				}
+
+				setSalary(salary) {
+					this.#salary = salary;
+				}
+			}
+		</script>
+	</head>
+</html>
