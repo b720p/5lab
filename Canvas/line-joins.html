@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function draw(){
+            let canvas = document.getElementById('canvas')
+            let ctx = canvas.getContext('2d')
+
+            ctx.translate(0.5,0.5)
+            ctx.lineWidth=8
+            
+            ctx.lineJoin = 'miter'
+            ctx.strokeRect(10,10,100,100)
+
+            ctx.lineJoin ='bevel'
+            ctx.strokeRect(130,10,100,100)
+
+            ctx.lineJoin = 'round'
+            ctx.strokeRect(250,10,100,100)
+
+
+        }
+    </script>
+</head>
+<body onload="draw()">
+    <canvas id="canvas" height="450" width="450"></canvas>
+</body>
+</html>

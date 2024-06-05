@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script>
+			function draw() {
+				let canvas = document.getElementById("canvas");
+				let ctx = canvas.getContext("2d");
+
+				ctx.lineWidth = 1;
+				ctx.beginPath();
+				ctx.moveTo(20, 20);
+				ctx.lineTo(250, 20);
+				ctx.stroke();
+
+				ctx.beginPath();
+				ctx.moveTo(20, 40);
+				ctx.lineTo(250, 40);
+				ctx.stroke();
+
+				ctx.translate(0.5, 0.5);
+
+				ctx.beginPath();
+				ctx.moveTo(20, 60);
+				ctx.lineTo(250, 60);
+				ctx.stroke();
+
+				ctx.beginPath();
+				ctx.moveTo(20, 80);
+				ctx.lineTo(250, 80);
+				ctx.stroke();
+			}
+		</script>
+	</head>
+	<body onload="draw()">
+		<canvas id="canvas" width="500" height="500"></canvas>
+	</body>
+</html>

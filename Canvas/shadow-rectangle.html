@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <script>
+        function draw(){
+            let canvas = document.getElementById("canvas");
+            let ctx = canvas.getContext("2d");
+
+            ctx.shadowOffsetX = 5;
+            ctx.shadowOffsetY = 5;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = "black";
+
+
+            ctx.fillStyle = "yellow";
+            ctx.fillRect(50, 50,150, 150);
+        }
+    </script>
+</head>
+<body onload="draw()">
+    <canvas id="canvas" width="300" height="300"></canvas>
+</body>
+</html>
